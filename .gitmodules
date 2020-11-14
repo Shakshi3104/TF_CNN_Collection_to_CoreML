@@ -1,0 +1,3 @@
+[submodule "tensoract"]
+	path = tensoract
+	url = https://github.com/haselab-dev/TensorFlow_CNN_Collections_for_HASC.git
