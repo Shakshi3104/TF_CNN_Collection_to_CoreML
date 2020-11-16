@@ -56,11 +56,13 @@ def convert(model: Model, model_name=None, nbits=32, quantization_mode="linear")
 
 
 if __name__ == "__main__":
-    from tensoract.applications import vgg16
-    from tensoract.applications import efficientnet
+    from tensoract.applications import vgg16, resnet, efficientnet, pyramidnet, efficientnet_lite
 
     models = {"VGG16": vgg16.VGG16,
-              "EfficientNetB0": efficientnet.EfficientNetB0}
+              "ResNet18": resnet.ResNet18,
+              "PyramidNet18": pyramidnet.PyramidNet18,
+              "EfficientNetB0": efficientnet.EfficientNetB0,
+              "EfficientNet_lite0": efficientnet_lite.EfficientNet_lite0}
 
     for model_name, Model_build in models.items():
         model = Model_build(include_top=True,
