@@ -73,5 +73,9 @@ if __name__ == "__main__":
         mlmodel.save("mlmodels/{}.mlmodel".format(model_name))
 
         # quantized model
+        # float 16bit
         mlmodel = convert(model, model_name=model_name, nbits=16)
         mlmodel.save("mlmodels/{}Float{}.mlmodel".format(model_name, 16))
+        # int 8bit
+        mlmodel = convert(model, model_name=model_name, nbits=8)
+        mlmodel.save("mlmodels/{}Int{}.mlmodel".format(model_name, 8))
