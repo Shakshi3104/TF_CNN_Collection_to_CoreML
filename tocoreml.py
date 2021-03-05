@@ -24,11 +24,11 @@ def add_reshape_layer(model: Model):
 
 
 # Convert tf.keras model to mlmodel
-def convert(model: Model, model_name=None, nbits=32, quantization_mode="linear"):
+def convert(model: Model, model_name=None, nbits=32, quantization_mode="linear", class_labels=["stay", "walk", "jog", "skip", "stUp", "stDown"]):
     # add reshape layer
     model = add_reshape_layer(model)
 
-    classifier_config = ct.ClassifierConfig(class_labels=["stay", "walk", "jog", "skip", "stUp", "stDown"])
+    classifier_config = ct.ClassifierConfig(class_labels=class_labels)
     mlmodel = ct.convert(model, classifier_config=classifier_config)
 
     # Quantization options
