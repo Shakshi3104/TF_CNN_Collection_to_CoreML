@@ -1,3 +1,6 @@
 [submodule "tensoract"]
 	path = tensoract
 	url = https://github.com/Shakshi3104/TensorFlow_CNN_Collections_for_HASC.git
+[submodule "coremotiontools"]
+	path = coremotiontools
+	url = https://github.com/Shakshi3104/motion-coremltools.git
