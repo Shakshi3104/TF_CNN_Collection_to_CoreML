@@ -1,7 +1,7 @@
 # TensorFlow CNN Collection to CoreML
 
 ## Dependency
-- `tensorflow 2.1.0`
+- `tensorflow 2.1.0 - 2.3.1`
 - `coremltools 4.1`
 
 ### Caution
